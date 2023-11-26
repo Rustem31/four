@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="four.css">
+  <title>Your Website</title>
+</head>
+
+
+<body>
+  <style>
+    body{
+      background: black;
+    }
+  </style>
+
+
+
+
+
+
+  <div class="object">
+    
+
+  
+    <h2 class="govno">Введите свои данные:</h2>
+
+
+</body>
+
+
+
+  
+
+  <form class="form">
+    <label for="lastname">Фамилия:</label>
+    <input type="text" id="lastname" name="lastname"><br>
+  
+    <label for="firstname">Имя:</label>
+    <input type="text" id="firstname" name="firstname"><br>
+  
+    <label for="phone">Номер телефона:</label>  
+    <input type="text" id="phone" name="phone"><br>
+  
+    <label for="birthdate">Дата рождения:</label>
+    <input type="date" id="birthdate" name="birthdate"><br>
+  
+    <button type="button" onclick="addToTable()">Добавить</button>
+  </form>
+  
+  <table id="resultTable"></table>
+  
+  <script class="cript">
+    function addToTable() {
+      let table = document.getElementById("resultTable");
+  
+      let row = table.insertRow(-1);
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      let cell3 = row.insertCell(2);
+      let cell4 = row.insertCell(3);
+  
+      cell1.innerHTML = document.getElementById("lastname").value;
+      cell2.innerHTML = document.getElementById("firstname").value;
+      cell3.innerHTML = document.getElementById("phone").value; 
+      cell4.innerHTML = document.getElementById("birthdate").value;
+    }
+  </script>
+  </div>
+</html>
